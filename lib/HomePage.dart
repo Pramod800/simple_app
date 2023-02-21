@@ -9,88 +9,106 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int pageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 216, 245, 223),
         appBar: AppBar(
+          elevation: 50,
           systemOverlayStyle: const SystemUiOverlayStyle(
-            systemNavigationBarColor: Colors.blue, // Navigation bar
-            statusBarColor: Colors.lightGreen, // Status bar
+            systemNavigationBarColor:
+                Color.fromARGB(255, 192, 49, 56), // Navigation bar
+            statusBarColor: Color.fromARGB(255, 85, 138, 24), // Status bar
           ),
           leading: IconButton(
               onPressed: () {}, iconSize: 35, icon: const Icon(Icons.menu)),
           title: const Center(
-            child: Text("AppBar"),
+            child: Text("UI/Design"),
           ),
 
-          backgroundColor: Theme.of(context).primaryColor,
-          shadowColor: const Color.fromARGB(22, 33, 39, 45),
+          // backgroundColor: Theme.of(context).primaryColor,
+          shadowColor: const Color.fromARGB(0, 0, 0, 0),
           actions: [
             IconButton(
-                icon: const Icon(Icons.camera), iconSize: 35, onPressed: () {}),
+                icon: const Icon(Icons.search_rounded),
+                iconSize: 35,
+                onPressed: () {}),
 
             IconButton(
-                icon: const Icon(Icons.search), iconSize: 35, onPressed: () {}),
+                icon: const Icon(Icons.person), iconSize: 35, onPressed: () {}),
 
             //more widgets to place here
           ],
-          bottom: TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.home)),
-              Tab(icon: Icon(Icons.send))
-              //more tabs here
-            ],
-          ),
+
+          flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                  gradient:
+                      LinearGradient(colors: [Colors.green, Colors.red]))),
+          // bottom: TabBar(
+          //   onTap: (index) {
+          //     print("selected tab is $index");
+          //   },
+          //   tabs: const [
+          //     Tab(icon: Icon(Icons.home), text: "Home"),
+          //     Tab(icon: Icon(Icons.star), text: "Star"),
+          //     Tab(icon: Icon(Icons.face), text: "Face")
+          //   ],
+          // ),
 
           //background color of appbar
         ),
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 200,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.green, Colors.red],
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  height: 200,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: TextFormField(
+                    style: const TextStyle(
+                      fontSize: 24,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w300,
+                    ),
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                    decoration: const InputDecoration(
+                      focusColor: Colors.white,
+                      //add prefix icon
+                      prefixIcon: Icon(
+                        Icons.person_outline_rounded,
+                        color: Colors.red,
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black54,
-                          blurRadius: 10,
-                        )
-                      ]),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: const Text("My name is pramod",
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.red)),
-                      )
-                    ],
+                    ),
                   ),
-                ),
+                )
               ],
             ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            onPressed: () {}, child: Icon(Icons.add_circle)),
+            onPressed: () {}, child: const Icon(Icons.add_circle)),
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
           child: Container(
               height: 65,
               decoration: BoxDecoration(
+                gradient:
+                    const LinearGradient(colors: [Colors.red, Colors.green]),
                 color: Theme.of(context).primaryColor,
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
@@ -101,25 +119,71 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.home,
-                      ),
+                      onPressed: () {
+                        setState(() {
+                          pageIndex = 0;
+                        });
+                      },
+                      icon: pageIndex == 0
+                          ? const Icon(
+                              Icons.home_filled,
+                              color: Colors.white,
+                            )
+                          : const Icon(
+                              Icons.home_outlined,
+                              color: Colors.white,
+                            ),
                       iconSize: 35,
-                      color: Color.fromARGB(255, 248, 247, 247)),
+                      color: const Color.fromARGB(255, 248, 247, 247)),
                   IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        setState(() {
+                          pageIndex = 1;
+                        });
+                      },
+                      icon: pageIndex == 1
+                          ? const Icon(
+                              Icons.work_rounded,
+                              color: Colors.white,
+                            )
+                          : const Icon(
+                              Icons.work_outline_rounded,
+                              color: Colors.white,
+                            ),
                       iconSize: 35,
                       color: Colors.white),
                   IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.person),
+                      onPressed: () {
+                        setState(() {
+                          pageIndex = 2;
+                        });
+                      },
+                      icon: pageIndex == 2
+                          ? const Icon(
+                              Icons.widgets_rounded,
+                              color: Colors.white,
+                            )
+                          : const Icon(
+                              Icons.widgets_outlined,
+                              color: Colors.white,
+                            ),
                       iconSize: 35,
                       color: Colors.white),
                   IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.settings),
+                    onPressed: () {
+                      setState(() {
+                        pageIndex = 3;
+                      });
+                    },
+                    icon: pageIndex == 3
+                        ? const Icon(
+                            Icons.settings,
+                            color: Colors.white,
+                          )
+                        : const Icon(
+                            Icons.settings_cell_rounded,
+                            color: Colors.white,
+                          ),
                     iconSize: 35,
                     color: Colors.white,
                   ),
