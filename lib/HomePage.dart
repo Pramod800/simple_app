@@ -1,3 +1,4 @@
+import 'package:first_app/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -36,11 +37,15 @@ class _HomePageState extends State<HomePage> {
                 icon: const Icon(Icons.search_rounded),
                 iconSize: 35,
                 onPressed: () {}),
-
             IconButton(
-                icon: const Icon(Icons.person), iconSize: 35, onPressed: () {}),
-
-            //more widgets to place here
+                icon: const Icon(Icons.person),
+                iconSize: 35,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                }),
           ],
 
           flexibleSpace: Container(
@@ -79,7 +84,6 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.all(20),
                   child: TextFormField(
                     style: const TextStyle(
-                      fontSize: 24,
                       color: Colors.blue,
                       fontWeight: FontWeight.w300,
                     ),
