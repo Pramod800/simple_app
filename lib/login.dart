@@ -65,10 +65,7 @@ class _LoginPageState extends State<LoginPage> {
             Text("Don't have an account? "),
             Row(
               children: <Widget>[
-                Image.asset('/google.png'),
-                Image.network(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvpu4beEjA8Y2wPPPzhLrIvGSZl67UKUiHqxxTZAHg&s',
-                )
+                Image.asset('assets/facebook.png', height: 40, width: 50),
               ],
             )
           ],
