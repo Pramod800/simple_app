@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416450556271",
+    "project_id": "broadway-e8356",
+    "storage_bucket": "broadway-e8356.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416450556271:android:105f9b19b5adcfed3cf89a",
+        "android_client_info": {
+          "package_name": "com.example.first_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416450556271-svhtau4j753i7nba3i5fmss9n15nu45j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwmkxgQEXMvvN0g0g9JeOLKJ3uHoiORuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416450556271-svhtau4j753i7nba3i5fmss9n15nu45j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

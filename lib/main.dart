@@ -1,7 +1,7 @@
 import 'package:first_app/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'UserProvider.dart';
+// import 'package:provider/provider.dart';
+// import 'UserProvider.dart';
 
 void main() {
   runApp(const MyApp());

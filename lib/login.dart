@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 20,
+              height: 80,
             ),
             const Center(
                 child: Text(
@@ -35,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: "Enter Username",
                 hintText: "Enter Username",
                 prefixIcon: Icon(
-                  Icons.verified_user,
+                  FontAwesome.user,
                   color: Colors.red,
                 ),
               ),
@@ -48,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 labelText: "Enter Password",
                 hintText: "Enter Password",
                 prefixIcon: Icon(
-                  Icons.password_sharp,
+                  FontAwesome.eye_slash,
                   color: Colors.red,
                 ),
               ),
@@ -62,10 +64,34 @@ class _LoginPageState extends State<LoginPage> {
                   "Login",
                   style: TextStyle(),
                 )),
-            Text("Don't have an account? "),
+            const SizedBox(
+              height: 15,
+            ),
+            const Text("Don't have an account? "),
+            const SizedBox(
+              height: 20,
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset('assets/facebook.png', height: 40, width: 50),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset('assets/facebook.png',
+                        height: 50, width: 60)),
+                const SizedBox(
+                  width: 20,
+                ),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset('assets/google.png',
+                        height: 50, width: 60)),
+                const SizedBox(
+                  width: 20,
+                ),
+                InkWell(
+                    onTap: () {},
+                    child: Image.asset('assets/twitter.png',
+                        height: 50, width: 60)),
               ],
             )
           ],
