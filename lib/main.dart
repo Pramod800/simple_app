@@ -1,13 +1,11 @@
 import 'package:first_app/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
-// import 'UserProvider.dart';
 
 void main() {
-  MultiProvider(
-    providers: [],
-  );
+  // MultiProvider(
+  //   providers: [],
+  // );
   runApp(const MyApp());
 }
 
