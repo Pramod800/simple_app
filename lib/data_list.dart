@@ -10,8 +10,12 @@ class DataListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Proovider"),
+          title: const Text("Proovider"),
         ),
-        body: SafeArea());
+        body: SafeArea(
+          child: Column(
+
+          ),
+        ));
   }
 }
