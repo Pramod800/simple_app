@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:first_app/data_list.dart';
 import 'package:first_app/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,7 +38,12 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 icon: const Icon(Icons.search_rounded),
                 iconSize: 35,
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DataListView()),
+                  );
+                }),
             IconButton(
                 icon: const Icon(Icons.person),
                 iconSize: 35,
@@ -46,6 +52,7 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(builder: (context) => const LoginPage()),
                   );
+
                 }),
           ],
 
