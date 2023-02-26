@@ -14,6 +14,13 @@ class DataListView extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
+            children: [
+              Expanded(child: 
+              ListView.builder(
+                itemCount: provider!.getUsernames[index],itemBuilder:((context, index) {
+                return Text($itemBuilder)
+              }) ))
+            ],
 
           ),
         ));
