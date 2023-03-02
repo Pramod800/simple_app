@@ -1,11 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:first_app/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
   // MultiProvider(
   //   providers: [],
   // );
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

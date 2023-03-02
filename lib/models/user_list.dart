@@ -33,6 +33,10 @@ class UserList {
     _data['support'] = support.toJson();
     return _data;
   }
+
+  static map(Function(dynamic json) param0) {}
+
+  static fromMap(json) {}
 }
 
 class Data {

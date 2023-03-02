@@ -34,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             TextFormField(
               decoration: const InputDecoration(
+                border: OutlineInputBorder(),
                 labelText: "Enter Username",
                 hintText: "Enter Username",
                 prefixIcon: Icon(
@@ -47,6 +48,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             TextFormField(
               decoration: const InputDecoration(
+                border: OutlineInputBorder(),
                 labelText: "Enter Password",
                 hintText: "Enter Password",
                 prefixIcon: Icon(
@@ -74,21 +76,21 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                InkWell(
+                GestureDetector(
                     onTap: () {},
                     child: Image.asset('assets/facebook.png',
                         height: 50, width: 60)),
                 const SizedBox(
                   width: 20,
                 ),
-                InkWell(
+                GestureDetector(
                     onTap: () {},
                     child: Image.asset('assets/google.png',
                         height: 50, width: 60)),
                 const SizedBox(
                   width: 20,
                 ),
-                InkWell(
+                GestureDetector(
                     onTap: () {},
                     child: Image.asset('assets/twitter.png',
                         height: 50, width: 60)),

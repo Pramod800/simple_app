@@ -39,20 +39,20 @@ class _HomePageState extends State<HomePage> {
                 icon: const Icon(Icons.search_rounded),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const DataListView()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => const DataListView()),
+                  // );
                 }),
             IconButton(
                 icon: const Icon(Icons.person),
                 iconSize: 35,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()),
-                  );
-
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const LoginPage()),
+                  // );
                 }),
           ],
 
